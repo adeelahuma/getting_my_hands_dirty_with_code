@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a812265f-fbb7-402d-b542-b9258fefab41" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1W4fxLdjQC30YDgLNTCG8pJOw4J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Solution">
+    <configuration name="CircularQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.CircularQueue" />
+      <module name="data_structures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyCircularQueue (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyCircularQueue" />
+      <module name="data_structures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyCircularQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.MyCircularQueue" />
+      <module name="data_structures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyCircularQueueTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyCircularQueueTest" />
+      <module name="data_structures" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <module name="data_structures" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CircularQueue" />
+      <item itemvalue="Application.MyCircularQueue" />
+      <item itemvalue="Application.MyCircularQueue (1)" />
+      <item itemvalue="Application.MyCircularQueueTest" />
+      <item itemvalue="Application.Solution" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.MyCircularQueueTest" />
+        <item itemvalue="Application.MyCircularQueue (1)" />
+        <item itemvalue="Application.MyCircularQueue" />
+        <item itemvalue="Application.CircularQueue" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a812265f-fbb7-402d-b542-b9258fefab41" name="Default Changelist" comment="" />
+      <created>1578414032872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578414032872</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="102" key="#Project_Structure" timestamp="1578430667193">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="320" y="102" key="#Project_Structure/0.23.1440.827@0.23.1440.827" timestamp="1578430667193" />
+    <state x="184" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578430718683">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="184" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.827@0.23.1440.827" timestamp="1578430718683" />
+    <state x="533" y="126" key="#com.intellij.ide.util.MemberChooser" timestamp="1578675836564">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="533" y="126" key="#com.intellij.ide.util.MemberChooser/0.23.1440.816@0.23.1440.816" timestamp="1578675836564" />
+    <state x="533" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.827@0.23.1440.827" timestamp="1578427764240" />
+    <state x="483" y="147" key="#xdebugger.evaluate" timestamp="1578432827974">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="483" y="147" key="#xdebugger.evaluate/0.23.1440.827@0.23.1440.827" timestamp="1578432827974" />
+    <state x="477" y="305" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1578429312218">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="477" y="305" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.827@0.23.1440.827" timestamp="1578429312218" />
+    <state width="1358" height="249" key="GridCell.Tab.0.bottom" timestamp="1578459724490">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1578446708954" />
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1578433654123" />
+    <state width="1358" height="249" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1578459724490" />
+    <state width="1358" height="249" key="GridCell.Tab.0.center" timestamp="1578459724489">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1578446708954" />
+    <state width="1358" height="201" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1578433654122" />
+    <state width="1358" height="249" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1578459724489" />
+    <state width="1358" height="249" key="GridCell.Tab.0.left" timestamp="1578459724489">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1578446708954" />
+    <state width="1358" height="201" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1578433654122" />
+    <state width="1358" height="249" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1578459724489" />
+    <state width="1358" height="249" key="GridCell.Tab.0.right" timestamp="1578459724489">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1578446708954" />
+    <state width="1358" height="201" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1578433654123" />
+    <state width="1358" height="249" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1578459724489" />
+    <state width="1358" height="249" key="GridCell.Tab.1.bottom" timestamp="1578459724490">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="249" key="GridCell.Tab.1.bottom/0.23.1440.826@0.23.1440.826" timestamp="1578446548278" />
+    <state width="1358" height="249" key="GridCell.Tab.1.bottom/0.23.1440.827@0.23.1440.827" timestamp="1578432962529" />
+    <state width="1358" height="249" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1578459724490" />
+    <state width="1358" height="249" key="GridCell.Tab.1.center" timestamp="1578459724490">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="249" key="GridCell.Tab.1.center/0.23.1440.826@0.23.1440.826" timestamp="1578446548278" />
+    <state width="1358" height="249" key="GridCell.Tab.1.center/0.23.1440.827@0.23.1440.827" timestamp="1578432962528" />
+    <state width="1358" height="249" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1578459724490" />
+    <state width="1358" height="249" key="GridCell.Tab.1.left" timestamp="1578459724490">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="249" key="GridCell.Tab.1.left/0.23.1440.826@0.23.1440.826" timestamp="1578446548277" />
+    <state width="1358" height="249" key="GridCell.Tab.1.left/0.23.1440.827@0.23.1440.827" timestamp="1578432962528" />
+    <state width="1358" height="249" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1578459724490" />
+    <state width="1358" height="249" key="GridCell.Tab.1.right" timestamp="1578459724490">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1358" height="249" key="GridCell.Tab.1.right/0.23.1440.826@0.23.1440.826" timestamp="1578446548278" />
+    <state width="1358" height="249" key="GridCell.Tab.1.right/0.23.1440.827@0.23.1440.827" timestamp="1578432962528" />
+    <state width="1358" height="249" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1578459724490" />
+    <state x="397" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1578537199442">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="397" y="267" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1578537199442" />
+    <state x="397" y="269" key="com.intellij.ide.util.TipDialog/0.23.1440.827@0.23.1440.827" timestamp="1578414043589" />
+    <state x="97" y="59" key="new project wizard" timestamp="1578427585816">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="97" y="59" key="new project wizard/0.23.1440.827@0.23.1440.827" timestamp="1578427585816" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CircularQueue.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CircularQueue.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/CircularQueue.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MyCircularQueueTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MyCircularQueueTest.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyCircularQueue.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Solution.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="head" />
+        <watch expression="tail" />
+        <watch expression="data" />
+        <watch expression="size" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

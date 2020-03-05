@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 10 15:45:10 2020
+
+@author: adeela
+"""
+
+
+# =============================================================================
+#       Linear Search
+# =============================================================================
+def linear_search(data, to_be_search):
+
+    for i in range(len(data)):
+        if to_be_search == data[i]:
+            return True
+
+    return False        
+            
+data = [3,4,5,1,2,9]
+
+assert linear_search(data, 0) == False    
+assert linear_search(data, 5) == True
+assert linear_search(data, 9) == True
+
+# =============================================================================
+#       Sort Data
+# =============================================================================
+def sort_data(data):
+    
+
+
+    for i in range(len(data)):
+
+        if data[i] > data[i+1]:
+            temp = data[i]
+            data[i] = data[i+1]
+            data[i+1] = temp
+        else:
+            temp = data[i+1]
+            data[i+1] = data[i+1]
+            data[i] = temp
+            
+                
+
+    
+# =============================================================================
+#       Binary Search    
+# =============================================================================
+def binary_search():
+    

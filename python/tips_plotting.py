@@ -245,15 +245,53 @@ if the values have meaning relative to each other -->continous
 
 
 
-
-
-
-
-
-
+'''
 
 
 '''
+For continous data, look at histogram 
+'''
+'''
+KDE plot--> the darker color indicates where the bulk of data is located 
+Interpretaion : a lot of data where total_bill == 10 to 15 and tip ~2
+'''
+
+sns.kdeplot(tips.total_bill, tips.tip, shade =True)
+plt.show()
+
+'''
+To plot if for different categories, plot it differently
+'''
+smoker = tips[tips['smoker'] == 'Yes']
+non_smoker = tips[tips['smoker'] == 'No']
+
+sns.kdeplot(smoker.total_bill, smoker.tip, shade =True)
+sns.kdeplot(non_smoker.total_bill, non_smoker.tip, shade =True)
+plt.show()
+
+'''
+Rule of thumb -- if out to 1000 values there are unique 30 we still can 
+consider it 
+
+Histograms are good at telling outliers 
+STD higher means the data is well spread 
+kurtosis : low value means a lot of data on the sides/extreme values.
+            High means a lot of data in the middle
+kurtosis: https://www.investopedia.com/terms/k/kurtosis.asp
+
+Like skewness, kurtosis is a statistical measure that is used to describe the 
+distribution. Whereas skewness differentiates extreme values in one versus the
+other tail, kurtosis measures extreme values in either tail. Distributions 
+with large kurtosis exhibit tail data exceeding the tails of the normal 
+distribution (e.g., five or more standard deviations from the mean). 
+Distributions with low kurtosis exhibit tail data that are generally less 
+extreme than the tails of the normal distribution.
+
+'''
+
+
+
+
 
 
 

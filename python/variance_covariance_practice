@@ -7,8 +7,29 @@ Created on Tue Feb 18 11:46:48 2020
 """
 
 '''
-    This file explores/implements variance, covaraince, pearson coorelation
-    and which one to use in practice. PEARSON CORRELATION is preffered.
+    This file explores/implements variance, covaraince, pearson coorelation, 
+    spearmean correlation coefficient, point biserail correlation etc
+    and which one to use in practice. 
+    PEARSON CORRELATION is preffered over covariance.
+    
+        
+Which correlation to use based on variable Type:     
+    Continous vs Continous                   -->  Paerson or Spearman
+    Continous vs Categorical(2 categories)   -->  Point Biserial 
+    Continous vs Categorical(>2 categories)  -->  ETA
+    Categorical vs Categorical               -->  Chi Squared or Cramer's V
+    
+LINK --> 
+    Correlation Analysis: https://statzilla.ru/application_en
+    https://numpy.org/doc/1.18/reference/generated/numpy.corrcoef.html
+    https://gradehub.com/blog/point-biserial/  
+    https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html
+    https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html
+    https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/correlation-coefficient-formula/
+    Pearson vs Spearman --> https://stats.stackexchange.com/questions/11746/what-could-cause-big-differences-in-correlation-coefficient-between-pearsons-an?noredirect=1&lq=1
+    Pearson or Spearman? --> https://stats.stackexchange.com/questions/8071/how-to-choose-between-pearson-and-spearman-correlation?noredirect=1&lq=1
+    p-value in correclation -- >https://stats.stackexchange.com/questions/131037/what-is-the-deal-with-p-value-when-generating-pearsons-r-correlation-coeffi?answertab=oldest#tab-top
+    
 '''
 
 import numpy as np 
@@ -120,7 +141,7 @@ covariance_matrix = pd.DataFrame(np.array(co_var).reshape(3,3))
 
 # =============================================================================
 #           PEARSON Correlation Coefficient
-#
+# Assumes that each dataset is normally distributed 
 # Its value is always in the range(-1, 1)  
 # >> 1  means perfect positive correlation
 # >> 0  means no relationship
@@ -201,18 +222,140 @@ from yellowbrick.features import Rank1D, Rank2D
 #    
     
     
+# =============================================================================
+#           Point Biserial Correlation
+#   The point biserial correlation is used to measure the relationship 
+#   between a binary variable, x, and a continuous variable, y. 
+#
+# =============================================================================
+
+df = pd.DataFrame({
+        'col_1': np.random.randint(50,100, size=50), 
+        'col_2': np.random.choice([0,1], 50),
+        'col_3': np.random.choice(['A','B'], 50),
+        'col_4': np.random.choice(['K', 'L', 'M'], 50)
+        })
+df = df.astype({'col_1': 'int', 'col_2': 'category', 'col_3': 'category', 
+                'col_4': 'category'})    
+
+df['col_5'] = df['col_1'] * 10
+df['col_6'] = df['col_1'] * -10
+df['col_7'] = np.random.randint(0,100, 50)
+
+df.head()
+
+# Pandas Dataframe Method:
+# computer pairwise correlation CONYINOUS columns ONLY. Default method is pearson
+df.corr()
+df.corr(method='spearman') # Question: why spearman coefficient's values are low? 
+
+# Numpy Method: it takes two data arrays 
+np.corrcoef(df['col_1'], df['col_2'])    # continous vs binary
+np.corrcoef(df['col_2'], df['col_2'])    # binary vs binary
+np.corrcoef(df['col_1'], df['col_3'])    # continous vs continous
+
+# Point Biserial 
+from scipy import stats
+stats.pointbiserialr(df['col_1'], df['col_2'])
+
+# H0 --> correlation is zero
+# H1 --> corelation is not zero
+# Now look at p-value to accept or reject null hypothesis
+
+
+# =============================================================================
+#           Pearson VS Spearman
+#Why the big difference
+#
+#>> If your data is normally distributed or uniformly distributed, 
+#I would think that Spearman's and Pearson's correlation should be fairly similar.
+#>> If they are giving very different results as in your case (.65 versus .30), 
+# my guess is that you have skewed data or outliers, and that outliers are 
+# leading Pearson's correlation to be larger than Spearman's correlation. 
+# I.e., very high values on X might co-occur with very high values on Y.
+#>>Your first step should be to look at the scatter plot.
+#>> In general, such a big difference between Pearson and Spearman is a red f
+# lag suggesting that the Pearson correlation may not be a useful summary of 
+# the association between your two variables, or you should transform one or 
+# both variables before using Pearson's correlation, or you should remove or 
+# adjust outliers before using Pearson's correlation.
+
+# <<Refer to link above for more details>>
+
+#<<WHICH ONE TO USE>>
+# compute both of the coefficients and look at the differences. 
+# In many cases, they will be exactly the same, so you don't need to worry.
+
+#If however, they are different then you need to look at whether or not you met
+# the assumptions of Pearsons (constant variance and linearity) and if these are
+# not met, you are probably better off using Spearmans.
+
+# =============================================================================
 
 
 
+# =============================================================================
+#           Cramer's V (phi)
+# =============================================================================
 
 
+# =============================================================================
+#           CHi Squared ( ki Squared) 
+# - LINK: 
+#   https://www.mathsisfun.com/data/chi-square-test.html
+#   Python Practical example : https://machinelearningmastery.com/chi-squared-test-for-machine-learning/
+#   ML Usage: https://www.quora.com/How-is-chi-test-used-for-feature-selection-in-machine-learning
+# - Calculated between categorical variables
+# - Chi square test tells you that which features are better related with the 
+#   outcome variable. Smaller p value means more closely related with the outcome.
+# - The variables are considered independent if the observed and expected 
+#   frequencies are similar, that the levels of the variables do not interact, 
+#   are not dependent
+# - H0: the observed frequencies for a categorical variable match the
+#           expected frequencies for the categorical variable./ 
+#       Independent varaibles
+#   H1: Dependent variables
+#   Interpretaion: if p-value <significae level(0.05) Reject Null 
+#                  (Meaning varaibles are Dependent) 
+#
+# =============================================================================
+
+from scipy.stats import chi2_contingency
+
+## BOTH COLUMNS has two disntinct categories
+observed_freq= pd.crosstab(df['col_2'], df['col_3'] ).to_numpy()
+chi, pvalue, ddof, expected = chi2_contingency(observed_freq)
+
+if pvalue < 0.05:  # NULL must go 
+    print('Dependent variables')
+else: 
+    print('Independent variables')    
+
+## COL_4 has 3 categories
+ob_freq = pd.crosstab(df['col_2'], df['col_4'])
+chi2_contingency(ob_freq)
 
 
+# =============================================================================
+#           Theil's U        
+# =============================================================================
 
 
-    
+# =============================================================================
+#           Correlation Ratio/ETA Correlation
+# =============================================================================
 
 
+# =============================================================================
+#       Contigency Table
+# - The table was called a contingency table, by Karl Pearson, because the 
+#   intent is to help determine whether one variable is contingent upon or 
+#   depends upon the other variable. 
+#   For example, does an interest in math or science depend on gender, 
+#       or are they independent?
+
+# =============================================================================
+pd.crosstab(df['col_2'], df['col_3'] )
 
 
 

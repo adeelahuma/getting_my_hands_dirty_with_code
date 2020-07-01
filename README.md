@@ -5,4 +5,4 @@ Well, Just putting my practice content here for reference for myself. Please fee
 Happy Coding!!
 
 ## Applied Pandas
-- [Sql vs Pandas](pandas_applied/sql_vs_pandas.ipynb)
+- [Sql vs Pandas](python/pandas_applied/sql_vs_pandas.ipynb)

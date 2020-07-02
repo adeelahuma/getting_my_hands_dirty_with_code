@@ -6,3 +6,6 @@ Happy Coding!!
 
 ## Applied Pandas
 - [Sql vs Pandas](python/pandas_applied/sql_vs_pandas.ipynb)
+
+## Statistics
+- [Variance,Covaraince & Correlations](python/stats_prob/variance_correlation.ipynb)

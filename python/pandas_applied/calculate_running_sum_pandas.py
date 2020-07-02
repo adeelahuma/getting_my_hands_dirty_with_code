@@ -31,6 +31,12 @@ df = pd.DataFrame({
          'amount': np.random.randint(50,500, 6)
         })
 
+# df = pd.DataFrame({
+#     'date' : pd.date_range('01/01/2020', '01/10/2020'),
+#     'cust_name': np.random.choice(['X','Y','Z'], size= 10),
+#     'amount': np.random.randint(50,100, size=10)
+# })
+
 # add a column for cummulative sum for each customer
 # cumsum == cummulative sunm == running total 
 df['cumsum_user'] = df.groupby('name').cumsum()

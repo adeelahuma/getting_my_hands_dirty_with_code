@@ -160,7 +160,57 @@ public class MyBinarySearchTree {
      *     -
      * */
 
+    int maxValLeft (BNode head){
 
+        int maxVal = Integer.MIN_VALUE;
+
+        if (head == null)
+            return maxVal;
+
+        maxVal = head.data;
+
+        while(head != null){
+            if (maxVal < head.data)
+                maxVal = head.data;
+
+            head = head.left;
+        }
+
+        return maxVal;
+
+    }
+
+    int minValRight (BNode head){
+
+        int minVal = Integer.MAX_VALUE;
+
+        if (head == null)
+            return minVal;
+
+        minVal = head.data;
+
+        while(head != null){
+            if (minVal > head.data)
+                minVal = head.data;
+
+            head = head.right;
+        }
+
+        return minVal;
+
+    }
+    // Approach 2
+    boolean isBST(BNode head){
+        if (head == null)
+            return false;
+
+        return (head.data >= maxValLeft(head.left) && head.data < minValRight(head.right));
+
+    }
+
+
+    //Approach - 3
+    // set min- max range for each node
     boolean isBSTUtil(BNode head, int minVal, int maxVal){
         if (head == null)
             return true;
@@ -210,8 +260,10 @@ public class MyBinarySearchTree {
         System.out.println("\nPost Order  Traversal --> ");
         bst.postOrderTraversal(bst.root);
 
-        System.out.println("\nIs Binary Search Tree --> " + bst.isBinarySearchTree(bst.root));
+        System.out.println("\nIs Binary Search Tree Approach 3--> " + bst.isBinarySearchTree(bst.root));
+        System.out.println("\nIs Binary Search Tree Approach 2--> " + bst.isBST(bst.root));
 
+        System.out.println("\nAdding an larger value in the left sub tree");
         //Add a Node to the left of the tree that breaks BST criteria
         BNode node = bst.root;
         while(node.left != null){
@@ -219,7 +271,9 @@ public class MyBinarySearchTree {
         }
         node.left = new BNode(23);
 
-        System.out.println("\nIs Binary Search Tree --> " + bst.isBinarySearchTree(bst.root));
+        System.out.println("\nIs Binary Search Tree Approach 3--> " + bst.isBinarySearchTree(bst.root));
+        System.out.println("\nIs Binary Search Tree Approach 2--> " + bst.isBST(bst.root));
+
 
     }
 

@@ -1,7 +1,8 @@
 package main.java;
 
+
+
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class MyBinarySearchTree {
@@ -315,6 +316,62 @@ public class MyBinarySearchTree {
         return count;
     }
 
+    /**
+     *  Get Mirror of a binary Tree
+     *
+     *  Approach - 1:
+     *      >> use a queue to save each node ; similar to Breadth first traversal
+     *
+     *  Approach- 2:
+     *      >> use post order traversal and then shift pointers
+     * */
+
+    //Approach -1
+    BNode getMirrorTree(BNode head){
+
+        BNode mNode = null;
+
+        if (head == null)
+            mNode = null;
+
+        mNode = head;
+
+        Queue<BNode> queue = new LinkedList<>();
+        queue.add(head);
+
+        while(!queue.isEmpty()){
+
+            BNode curr = queue.poll();
+            if (curr.left != null)
+                queue.add(curr.left);
+
+            if (curr.right != null)
+                queue.add(curr.right);
+
+            BNode temp = curr.left;
+            curr.left = curr.right;
+            curr.right = temp;
+        }
+
+        return mNode;
+    }
+
+    //Approach - 2
+
+    BNode getMirrorTree2(BNode head){
+
+        if (head == null)
+            return head;
+
+        BNode left = getMirrorTree2(head.left);
+        BNode right = getMirrorTree2(head.right);
+        head.right = left;
+        head.left = right;
+
+        return head;
+    }
+
+
     public static void main(String [] args){
 
         MyBinarySearchTree bst = new MyBinarySearchTree();
@@ -395,6 +452,15 @@ public class MyBinarySearchTree {
 
         System.out.println("\n Leaves in BST ==> " + bst1.countLeaves(bst1.root));
 
+
+        System.out.println("\n Mirror of a Tree - Approach - 1");
+        BNode mNode = bst1.getMirrorTree(bst1.root);
+        bst1.breadthFirstTraversal(mNode);
+
+        //FIXME
+        System.out.println("\n Mirror of a Tree - Approach - 2");
+        BNode mNode2 = bst1.getMirrorTree2(mNode);
+        bst1.breadthFirstTraversal(mNode2);
 
     }
 

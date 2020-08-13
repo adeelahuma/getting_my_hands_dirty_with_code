@@ -229,6 +229,91 @@ public class MyBinarySearchTree {
         return isBSTUtil(head, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
+    // time complexity -- > o(log n)
+    BNode findMinLeft(BNode head){
+
+        if (head == null){
+            return null;
+        }
+
+        while (head.left != null){
+            head = head.left;
+        }
+        return head;
+    }
+
+    BNode deleteANode(BNode head, int data){
+
+        if (head == null)
+            return null;
+
+        if (head.data == data){
+
+            if (head.left == null && head.right == null){ //case-1
+                head = null;
+
+            } else if (head.left == null ){ //case-2
+                head = head.right;
+
+            }else if (head.right == null){ //case-2
+                head = head.left;
+
+            } else{ //case-3
+
+                BNode temp = findMinLeft(head.right);
+                head.data = temp.data ;
+                head.right = deleteANode(head.right, temp.data);
+            }
+
+        } else if ( data < head.data ){
+            head.left = deleteANode(head.left, data);
+        }else{
+            head.right = deleteANode(head.right, data);
+        }
+
+        return head;
+    }
+
+
+    //TODO:
+    BNode getSuccessor(BNode head, int data){
+        if (head == null)
+            return null;
+
+        return null;
+    }
+
+    /*
+    *  Count the number of leaves in a binary tree
+    * */
+
+    int countLeaves(BNode head){
+        int count = 0;
+
+        if (head == null)
+            count = 0;
+
+        Queue<BNode> queue = new LinkedList<BNode>();
+
+        queue.add(head);
+
+        while(!queue.isEmpty()){
+            BNode temp = queue.poll();
+
+            if(temp.left == null && temp.right == null) {
+                count += 1;
+            } else if(temp.left != null && temp.right != null){
+                queue.add(temp.left);
+                queue.add(temp.right);
+            } else if (temp.left != null) {
+                queue.add(temp.left);
+            }else if (temp.right != null){
+                queue.add(temp.right);
+            }
+        }
+
+        return count;
+    }
 
     public static void main(String [] args){
 
@@ -273,6 +358,42 @@ public class MyBinarySearchTree {
 
         System.out.println("\nIs Binary Search Tree Approach 3--> " + bst.isBinarySearchTree(bst.root));
         System.out.println("\nIs Binary Search Tree Approach 2--> " + bst.isBST(bst.root));
+
+
+        MyBinarySearchTree bst1 = new MyBinarySearchTree();
+
+        bst1.root = bst1.insert(bst1.root, 12);
+        bst1.root = bst1.insert(bst1.root, 5);
+        bst1.root = bst1.insert(bst1.root, 3);
+        bst1.root = bst1.insert(bst1.root, 7);
+        bst1.root = bst1.insert(bst1.root, 1);
+        bst1.root = bst1.insert(bst1.root, 9);
+        bst1.root = bst1.insert(bst1.root, 15);
+        bst1.root = bst1.insert(bst1.root, 13);
+        bst1.root = bst1.insert(bst1.root, 17);
+
+        System.out.println("\n Leaves in BST ==> " + bst1.countLeaves(bst1.root));
+
+        System.out.println("\n Tree Breadth First Traversal... ");
+        bst1.breadthFirstTraversal(bst1.root);
+
+        System.out.println("\n Tree after deleting 1: ");
+        bst1.root = bst1.deleteANode(bst1.root, 1);
+
+        bst1.breadthFirstTraversal(bst1.root);
+
+
+        System.out.println("\n Tree after deleting 5: ");
+        bst1.root = bst1.deleteANode(bst1.root, 5);
+
+        bst1.breadthFirstTraversal(bst1.root);
+
+        System.out.println("\n Tree after deleting 12 [ROOT]: ");
+        bst1.root = bst1.deleteANode(bst1.root, 12);
+
+        bst1.breadthFirstTraversal(bst1.root);
+
+        System.out.println("\n Leaves in BST ==> " + bst1.countLeaves(bst1.root));
 
 
     }
